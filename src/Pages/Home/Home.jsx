@@ -1,4 +1,5 @@
 import Essentialitems from '../Essentialitems/Essentialitems';
+import Instafeed from '../Instafeed/Instafeed';
 import Newsletter from '../Newsletter/Newsletter';
 import bg from './homecss.css'
 
@@ -16,6 +17,9 @@ const Home = () => {
                 </div>
                 <div>
                     <Essentialitems></Essentialitems>
+                </div>
+                <div>
+                    <Instafeed></Instafeed>
                 </div>
 
 
