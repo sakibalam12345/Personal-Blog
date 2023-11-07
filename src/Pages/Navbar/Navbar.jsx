@@ -14,22 +14,22 @@ const Navbar = () => {
                    HOME
                   </NavLink></li>
     <li>     <NavLink
-                    to='/addblogs'
+                    to='/addblog'
                     className={({ isActive }) =>
                       isActive && 'bg-black underline'
                        
                     }
                   >
-                   ADD BLOGS
+                   ADD BLOG
                   </NavLink></li>
     <li>     <NavLink
-                    to='/allblogs'
+                    to='/allblog'
                     className={({ isActive }) =>
                       isActive && 'bg-black underline'
                        
                     }
                   >
-                   ALL BLOGS
+                   ALL BLOG
                   </NavLink></li>
     <li>     <NavLink
                     to='/featuredblogs'

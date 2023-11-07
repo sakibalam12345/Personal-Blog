@@ -1,7 +1,12 @@
 
+
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Authprovider/Authprovider';
 
 const Registration = () => {
+
+const {createuser} = useContext(AuthContext)
 
     const handleregistration = e =>{
         e.preventDefault();
@@ -11,7 +16,17 @@ const Registration = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(name,photo,email,password)
+
+        createuser(email,password)
+        .then(result =>{
+          console.log(result)
+        })
+        .catch(error=>{
+          console.error(error)
+        })
+     
     }
+  
 
    
     return (
@@ -41,6 +56,7 @@ const Registration = () => {
                 </label>
                 <input type="email" name="email" placeholder="email" className="input input-bordered" required />
               </div>
+              
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>

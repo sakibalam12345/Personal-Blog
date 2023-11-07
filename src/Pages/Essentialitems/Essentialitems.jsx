@@ -12,7 +12,7 @@ const Essentialitems = () => {
          
         })
     },[])
-    console.log(items)
+    // console.log(items)
     return (
         <div>
             <h1 className="font-bold text-5xl text-center mt-10 mb-16">TRAVEL ESSENTIALS ITEMS</h1>

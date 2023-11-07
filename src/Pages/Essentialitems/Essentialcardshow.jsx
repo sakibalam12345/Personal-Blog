@@ -1,8 +1,22 @@
 
 
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+
+
 const Essentialcardshow = ({item}) => {
 
-    const {name,price,img} = item
+    const {name,price,img,_id} = item;
+
+    const handlecart = id =>{
+        console.log(id)
+        toast('successfully added to the cart')
+
+    }
+
+   
+
+
     return (
 
         <div className="max-w-6xl mx-auto">
@@ -16,7 +30,9 @@ const Essentialcardshow = ({item}) => {
     <h2 className="card-title">{name}</h2>
     <p>$ {price}</p>
     <div className="card-actions">
-    <button className="btn btn-outline">add to cart</button>
+        
+        <button onClick={()=>handlecart(_id)} className="btn btn-outline">add to cart</button>
+       
     </div>
   </div>
 </div>

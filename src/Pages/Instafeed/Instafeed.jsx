@@ -42,7 +42,7 @@ const Instafeed = () => {
                     <PhotoView src="https://i.ibb.co/nktHZdr/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg">
                     <img className="rounded-lg" src="https://i.ibb.co/nktHZdr/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg" alt="" />
                     </PhotoView>
-                <img className="rounded-lg" src="https://i.ibb.co/nktHZdr/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg" alt="" />
+               
                 </div>
                 <div className="col-span-4 ml-16">
                     <PhotoView src="https://i.ibb.co/cbkdG2n/rear-view-back-young-asian-hiking-man-standing-riseup-hands-with-happy-peak-rocky-mountain-copy-spac.jpg">
