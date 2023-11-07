@@ -13,7 +13,6 @@ const Root = () => {
             <Footer></Footer>
             <ToastContainer 
             position="top-center"
-            
             />
         </div>
     );

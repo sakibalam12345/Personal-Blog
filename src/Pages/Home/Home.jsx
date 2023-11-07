@@ -1,3 +1,4 @@
+import Essentialitems from '../Essentialitems/Essentialitems';
 import Newsletter from '../Newsletter/Newsletter';
 import bg from './homecss.css'
 
@@ -12,6 +13,9 @@ const Home = () => {
                
                 <div className='mt-20 '>
                 <Newsletter></Newsletter>
+                </div>
+                <div>
+                    <Essentialitems></Essentialitems>
                 </div>
 
 
