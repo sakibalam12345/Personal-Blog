@@ -1,7 +1,7 @@
 
 
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Authprovider/Authprovider';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
@@ -9,6 +9,7 @@ import { toast } from 'react-toastify';
 const Registration = () => {
   const [regissuccess,setregissuccess] = useState();
   const [regiserror,setregierror] = useState();
+  const navigate = useNavigate();
 
 const {createuser} = useContext(AuthContext)
 
@@ -36,6 +37,9 @@ const {createuser} = useContext(AuthContext)
         createuser(email,password)
         .then(result =>{
           console.log(result)
+          setregissuccess(toast('Registration successfull'))
+          navigate('/')
+          
         })
         .catch(error=>{
           console.error(error)

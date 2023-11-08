@@ -1,11 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../Authprovider/Authprovider";
+import { toast } from "react-toastify";
 
 
 const Navbar = () => {
 
-  const {user,logout} = useContext(AuthContext)
+  const {user,logout} = useContext(AuthContext);
+  const [logoutsuccess,setlogoutsuccess] = useState();
 
     const navlink = <>
     <li>     <NavLink
@@ -67,6 +69,7 @@ const Navbar = () => {
     const handledelete = () =>{
       logout()
       .then(res=>{
+        setlogoutsuccess(toast('Logout successfully'))
         console.log(res)
       })
 

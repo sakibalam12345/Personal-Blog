@@ -10,6 +10,7 @@ import Allblog from "../Pages/Allblog/Allblog";
 import Wishlist from "../Pages/Wishlist/Wishlist";
 import Blogdetails from "../Pages/Blogdetails/Blogdetails";
 import Update from "../Pages/Update/Update";
+import Privateroute from "../Pages/Privateroute/Privateroute";
 
 
 
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/addblog',
-                element : <Addblog></Addblog>
+                element :<Privateroute> <Addblog></Addblog></Privateroute>
 
             },
             {
@@ -36,18 +37,18 @@ const router = createBrowserRouter([
             },
             {
                 path : '/wishlist',
-                element : <Wishlist></Wishlist>
+                element :<Privateroute> <Wishlist></Wishlist></Privateroute>
             },
             {
                 path : '/blogdetails/:id',
-                element : <Blogdetails></Blogdetails>,
+                element : <Privateroute><Blogdetails></Blogdetails></Privateroute>,
                 loader : ({params})=> fetch(`http://localhost:5000/info/${params.id}`)
 
                 
             },
             {
               path : '/update/:id',
-              element : <Update></Update>,
+              element :  <Privateroute><Update></Update></Privateroute>,
               loader : ({params})=> fetch(`http://localhost:5000/info/${params.id}`)
             },
             {

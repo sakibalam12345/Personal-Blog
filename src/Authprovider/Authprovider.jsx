@@ -53,6 +53,7 @@ const gooleprovider = new GoogleAuthProvider();
 
 
      const authinfo = {
+        loader,
         user,
         createuser,
         login,
