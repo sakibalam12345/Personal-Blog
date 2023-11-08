@@ -26,15 +26,15 @@ const Blogdetails = () => {
     useEffect(()=>{
         axios.get('http://localhost:5000/comment')
         .then(res=>{
-            console.log(res.data)
+            // console.log(res.data)
             setallcomment(res.data)
         })
     },[]);
     // cooment data end
-    console.log(allcomment)
+    // console.log(allcomment)
 
     // console.log(alldata)
-    const {title,image,shortdes,longdes} = alldata;
+    const {title,image,shortdes,longdes,_id} = alldata;
 // handle comment
     const handlecomment = e =>{
         e.preventDefault();
@@ -73,7 +73,7 @@ const Blogdetails = () => {
                 {useremail === useremail ? 
                 
                 <><h1 className="text-red-500 mt-8">You cant comment on your own post</h1>
-                <Link>
+                <Link to={`/update/${_id}`}>
                 <button className="btn btn-outline mt-2">Update Details</button>
                 </Link>
                 </> :
