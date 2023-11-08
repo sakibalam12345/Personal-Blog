@@ -3,8 +3,12 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Authprovider/Authprovider';
+import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const Registration = () => {
+  const [regissuccess,setregissuccess] = useState();
+  const [regiserror,setregierror] = useState();
 
 const {createuser} = useContext(AuthContext)
 
@@ -16,6 +20,18 @@ const {createuser} = useContext(AuthContext)
         const email = form.email.value;
         const password = form.password.value;
         console.log(name,photo,email,password)
+        if(password.length < 6){
+          setregierror(toast('password should be more than 6 charecter'))
+        }
+        else if(!/[A-Z]/.test(password)){
+          setregierror(toast('password do not have a capital letter'))
+        }
+        else if(!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)){
+          setregierror(toast('password do not have a special character'))
+        }
+        else if(!/[0-9]/.test(password)){
+          setregierror(toast('password do not have number'))
+        }
 
         createuser(email,password)
         .then(result =>{

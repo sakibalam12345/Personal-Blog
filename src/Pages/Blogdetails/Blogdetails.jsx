@@ -114,6 +114,7 @@ const Blogdetails = () => {
         allcomment.map(singlecomment => <Commenttable
              key={singlecomment._id} 
              singlecomment={singlecomment}
+             useremail={useremail}
         
         ></Commenttable>)
 
