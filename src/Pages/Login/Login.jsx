@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Authprovider/Authprovider";
+import { FcGoogle} from 'react-icons/fc';
 
 
 const Login = () => {
 
-  const {login,user} = useContext(AuthContext)
+  const {login,user,loginwithgoogle} = useContext(AuthContext)
 
     const handlelogin = e =>{
         e.preventDefault();
@@ -21,6 +22,16 @@ const Login = () => {
         .catch(error=>{
           console.error(error)
         })
+    }
+    const handlegoogle = ()=>{
+      loginwithgoogle()
+      .then(res=>{
+        console.log(res)
+      })
+      .catch(error=>{
+        console.error(error)
+      })
+
     }
     return (
         <div className="hero  min-h-screen bg-base-200">
@@ -51,6 +62,10 @@ const Login = () => {
             <div className="text-center pb-5">
                 <h1>Do not have an accout? please <Link to='/registration'><button className="btn btn-outline">registration</button></Link></h1>
             </div>
+          </div>
+          <div>
+            <h1>Login with Google</h1>
+            <button onClick={handlegoogle} className="btn btn-outline ml-10"><FcGoogle></FcGoogle></button>
           </div>
         </div>
       </div>
