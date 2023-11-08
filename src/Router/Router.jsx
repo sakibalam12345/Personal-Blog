@@ -8,6 +8,7 @@ import Registration from "./Registration/Registration";
 import Addblog from "../Pages/Addblog/Addblog";
 import Allblog from "../Pages/Allblog/Allblog";
 import Wishlist from "../Pages/Wishlist/Wishlist";
+import Blogdetails from "../Pages/Blogdetails/Blogdetails";
 
 
 
@@ -35,6 +36,13 @@ const router = createBrowserRouter([
             {
                 path : '/wishlist',
                 element : <Wishlist></Wishlist>
+            },
+            {
+                path : '/blogdetails/:id',
+                element : <Blogdetails></Blogdetails>,
+                loader : ({params})=> fetch(`http://localhost:5000/info/${params.id}`)
+
+                
             },
             {
                 path : '/login',

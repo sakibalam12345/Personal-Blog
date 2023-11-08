@@ -37,6 +37,7 @@ const Wishlistcardshow = ({item,wishlisted,setwishlisted}) => {
     }
     return (
         <div className="max-w-7xl mx-auto">
+            
         <div className="card w-[900px] h-[600px] lg:card-side bg-base-100 shadow-xl mb-7">
         <figure><img className="h-full w-[1250px]" src={image} alt="Album"/></figure>
         <div className="card-body">

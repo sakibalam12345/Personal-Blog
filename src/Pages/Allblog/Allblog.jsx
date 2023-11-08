@@ -12,7 +12,7 @@ const Allblog = () => {
     useEffect(()=>{
         axios.get('http://localhost:5000/info')
         .then(res=>{
-            console.log(res.data)
+            // console.log(res.data)
             setallblogs(res.data);
             setFilteredBlogs(res.data)
         })

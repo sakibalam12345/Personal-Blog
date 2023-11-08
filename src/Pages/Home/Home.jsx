@@ -2,7 +2,7 @@ import Essentialitems from '../Essentialitems/Essentialitems';
 import Instafeed from '../Instafeed/Instafeed';
 import Newsletter from '../Newsletter/Newsletter';
 import Recentblog from '../Recentblog/Recentblog';
-import bg from './homecss.css'
+import css from './homecss.css'
 
 
 const Home = () => {

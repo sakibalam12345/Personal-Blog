@@ -6,10 +6,15 @@ import Swal from "sweetalert2";
 const Allblogshow = ({blog}) => {
     const {title,image,shortdes,category,_id,longdes} = blog;
 
+    const handledetails = id =>{
+        console.log(id)
+
+    }
+
     const handlewishlist = id =>{
         console.log(id)
         const alldata = {title,image,shortdes,category,longdes}
-        console.log(alldata)
+        // console.log(alldata)
 
         axios.post('http://localhost:5000/wishlist',alldata)
         .then(res=>{
@@ -36,13 +41,12 @@ const Allblogshow = ({blog}) => {
     <h2 className="card-title">{title}</h2>
     <p>{shortdes}</p>
     <div className="card-actions justify-end">
-        <Link>
-        <button className="btn btn-outline">Details</button>
+        <Link to={`/blogdetails/${_id}`}>
+        <button  className="btn btn-outline">Details</button>
         </Link>
-        <Link >
+       
         <button onClick={()=>handlewishlist(_id)} className="btn btn-outline">Wishlist</button>
-        </Link>
-      
+     
     </div>
   </div>
 </div>

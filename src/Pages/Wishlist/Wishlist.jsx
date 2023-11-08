@@ -20,6 +20,7 @@ const Wishlist = () => {
     return (
         <div className="max-w-7xl mx-auto">
             <h1 className="font-bold text-3xl text-center mb-10">Your Selected wishlist</h1>
+            <h2 className="text-red-600 mb-10">note : it takes some time to load data.please wait</h2>
             <div className="grid grid-cols-1">
                 {
                     wishlisted.map(item=> <Wishlistcardshow key={item._id} 
