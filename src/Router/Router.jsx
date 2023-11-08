@@ -7,6 +7,7 @@ import Registration from "./Registration/Registration";
 
 import Addblog from "../Pages/Addblog/Addblog";
 import Allblog from "../Pages/Allblog/Allblog";
+import Wishlist from "../Pages/Wishlist/Wishlist";
 
 
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path : '/allblog',
                 element : <Allblog></Allblog>
+            },
+            {
+                path : '/wishlist',
+                element : <Wishlist></Wishlist>
             },
             {
                 path : '/login',

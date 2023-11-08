@@ -14,8 +14,6 @@ const Essentialcardshow = ({item}) => {
 
     }
 
-   
-
 
     return (
 

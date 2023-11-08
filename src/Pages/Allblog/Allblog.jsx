@@ -46,7 +46,7 @@ const handlechange = e =>{
      </select>
 
             </div>
-            <p className="text-red-500 mb-4">It takes time to load data.please wait</p>
+            <p className="text-red-500 mb-4">It takes some time to load data.please wait</p>
    
             <div className="grid grid-cols-2 gap-8">
             {
