@@ -2,7 +2,7 @@
 
 const Commenttable = ({singlecomment}) => {
 
-    const {username,userphoto,comment} = singlecomment;
+    const {username,userphoto,comment,useremail} = singlecomment;
     return (
        
              <tr>

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Authprovider/Authprovider";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -68,8 +68,18 @@ const Blogdetails = () => {
                 <p className="font-medium text-base mb-6">{longdes}</p>
             </div>
             {/* starts here */}
-            <div>
+         
                 <h1 className="font-bold text-xl">Post a Comment</h1>
+                {useremail === useremail ? 
+                
+                <><h1 className="text-red-500 mt-8">You cant comment on your own post</h1>
+                <Link>
+                <button className="btn btn-outline mt-2">Update Details</button>
+                </Link>
+                </> :
+                
+                <>
+                  <div>
                 <div>
                 <form onSubmit={handlecomment}>
                 <textarea placeholder="Your comment" name="comment" className="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
@@ -79,6 +89,7 @@ const Blogdetails = () => {
                
             </div>
             {/* ends here */}
+
             {/* starts here */}
             <div className="mt-10">
                 <h1 className="font-medium text-lg ml-20">All comment</h1>
@@ -106,7 +117,9 @@ const Blogdetails = () => {
         
         ></Commenttable>)
 
-      }   
+      }  
+      
+    
     </tbody>
   </table>
 </div>
@@ -114,6 +127,9 @@ const Blogdetails = () => {
                 
             </div>
             {/* ends here */}
+                
+                </>}
+
         </div>
     );
 };
