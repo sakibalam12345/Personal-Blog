@@ -20,7 +20,7 @@ const Update = () => {
         console.log(title,image,shortdes,category,longdes)
         const update = {title,image,shortdes,category,longdes}
 
-        axios.patch(`http://localhost:5000/info/${_id}`,update)
+        axios.patch(`https://blog-server-sandy.vercel.app/info/${_id}`,update)
         .then(res=>{
             console.log(res.data)
             if(res.data.modifiedCount > 0){

@@ -10,7 +10,7 @@ const Allblog = () => {
     const [filteredBlogs, setFilteredBlogs] = useState([]);
     
     useEffect(()=>{
-        axios.get('http://localhost:5000/info')
+        axios.get('https://blog-server-sandy.vercel.app/info')
         .then(res=>{
             // console.log(res.data)
             setallblogs(res.data);

@@ -9,7 +9,7 @@ const Wishlist = () => {
     const [wishlisted,setwishlisted] = useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/wishlist')
+        axios.get('https://blog-server-sandy.vercel.app/wishlist')
         .then(res=>{
             console.log(res.data)
             setwishlisted(res.data)

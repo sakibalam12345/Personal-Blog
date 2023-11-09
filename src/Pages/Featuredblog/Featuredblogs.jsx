@@ -8,7 +8,7 @@ const Featuredblogs = () => {
 
     const [featuredblog,setfeaturedblog] = useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:5000/info')
+        axios.get('https://blog-server-sandy.vercel.app/info')
         .then(res=>{
             console.log(res.data)
             const sorteddata = res.data.sort((a,b)=> b.longdes.length - a.longdes.length)

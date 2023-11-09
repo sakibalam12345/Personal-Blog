@@ -24,7 +24,7 @@ const Blogdetails = () => {
     // comment data start
     const [allcomment,setallcomment] = useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:5000/comment')
+        axios.get('https://blog-server-sandy.vercel.app/comment')
         .then(res=>{
             // console.log(res.data)
             setallcomment(res.data)
@@ -43,7 +43,7 @@ const Blogdetails = () => {
         // console.log(comment)
         const allinfo = {username,userphoto,comment,useremail}
     
-        axios.post('http://localhost:5000/comment',allinfo)
+        axios.post('https://blog-server-sandy.vercel.app/comment',allinfo)
         .then(res=>{
             console.log(res.data)
             if(res.data.insertedId){

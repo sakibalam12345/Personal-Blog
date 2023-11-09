@@ -6,7 +6,7 @@ const Essentialitems = () => {
 
     const [items,setitems] = useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:5000/item')
+        axios.get('https://blog-server-sandy.vercel.app/item')
         .then(result=>{
             setitems(result.data)
          

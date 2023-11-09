@@ -44,14 +44,14 @@ const router = createBrowserRouter([
             {
                 path : '/blogdetails/:id',
                 element : <Privateroute><Blogdetails></Blogdetails></Privateroute>,
-                loader : ({params})=> fetch(`http://localhost:5000/info/${params.id}`)
+                loader : ({params})=> fetch(`https://blog-server-sandy.vercel.app/info/${params.id}`)
 
                 
             },
             {
               path : '/update/:id',
               element :  <Privateroute><Update></Update></Privateroute>,
-              loader : ({params})=> fetch(`http://localhost:5000/info/${params.id}`)
+              loader : ({params})=> fetch(`https://blog-server-sandy.vercel.app/info/${params.id}`)
             },
             {
               path : '/mostrecent',

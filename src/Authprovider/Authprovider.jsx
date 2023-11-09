@@ -46,12 +46,12 @@ const gooleprovider = new GoogleAuthProvider();
             setuser(currentuser);
             setloader(false);
             if(currentuser){        
-                axios.post('http://localhost:5000/jwt',loggeduser,  { withCredentials : true})
+                axios.post('https://blog-server-sandy.vercel.app/jwt',loggeduser,  { withCredentials : true})
                 .then(res=>{
                     console.log('token response',res.data)
                 })
             }else{
-                axios.post('http://localhost:5000/signout',loggeduser,{withCredentials : true})
+                axios.post('https://blog-server-sandy.vercel.app/signout',loggeduser,{withCredentials : true})
                 .then(res=>{
                     console.log(res.data)
                 })

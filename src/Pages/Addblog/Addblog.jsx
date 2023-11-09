@@ -18,7 +18,7 @@ const Addblog = () => {
         console.log(title,image,shortdes,category,longdes,formattedtime);
         const alldata = {title,image,shortdes,category,longdes, currenttime : formattedtime};
 
-        axios.post('http://localhost:5000/info',alldata)
+        axios.post('https://blog-server-sandy.vercel.app/info',alldata)
         .then(res=>{
             console.log(res.data)
             if(res.data.insertedId){

@@ -16,7 +16,7 @@ const Allblogshow = ({blog}) => {
         const alldata = {title,image,shortdes,category,longdes}
         // console.log(alldata)
 
-        axios.post('http://localhost:5000/wishlist',alldata)
+        axios.post('https://blog-server-sandy.vercel.app/wishlist',alldata)
         .then(res=>{
             console.log(res.data)
             if(res.data.insertedId){

@@ -9,7 +9,7 @@ const Mostrecent = () => {
     const [allblog,setallblog] = useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/info')
+        axios.get('https://blog-server-sandy.vercel.app/info')
         .then(res=>{
             console.log(res.data)
             const sortdata = res.data.sort((a,b)=> new Date(b.currenttime)- new Date(a.currenttime))
