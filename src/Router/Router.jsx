@@ -12,6 +12,7 @@ import Blogdetails from "../Pages/Blogdetails/Blogdetails";
 import Update from "../Pages/Update/Update";
 import Privateroute from "../Pages/Privateroute/Privateroute";
 import Mostrecent from "../Pages/Recentblog/Mostrecent";
+import Featuredblogs from "../Pages/Featuredblog/Featuredblogs";
 
 
 
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
             {
               path : '/mostrecent',
               element : <Mostrecent></Mostrecent>
+            },
+            {
+                path : '/featuredblogs',
+                element : <Featuredblogs></Featuredblogs>
+
             },
             {
                 path : '/login',
