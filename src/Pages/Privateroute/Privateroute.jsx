@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Authprovider/Authprovider";
 import { Navigate, useLocation } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 
@@ -12,7 +14,7 @@ const Privateroute = ({children}) => {
 
     const {user,loader} = useContext(AuthContext);
     if(loader){
-        return <span className="loading loading-spinner loading-xs"></span>
+        return <Skeleton count={5} />
     }
     if(user){
         return children

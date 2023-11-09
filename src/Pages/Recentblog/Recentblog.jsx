@@ -8,7 +8,7 @@ const Recentblog = () => {
             <div className="flex justify-between items-center">
                 <div className="flex-1">
                     <h1 className="font-semibold text-4xl pb-5">Explore More About <br /> Our Recent <br /> Journey</h1>
-                    <Link>
+                    <Link to='/mostrecent'>
                     <button className="btn btn-outline">See more</button>
                     </Link>
                      </div>

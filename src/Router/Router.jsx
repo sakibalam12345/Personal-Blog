@@ -11,6 +11,7 @@ import Wishlist from "../Pages/Wishlist/Wishlist";
 import Blogdetails from "../Pages/Blogdetails/Blogdetails";
 import Update from "../Pages/Update/Update";
 import Privateroute from "../Pages/Privateroute/Privateroute";
+import Mostrecent from "../Pages/Recentblog/Mostrecent";
 
 
 
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
               path : '/update/:id',
               element :  <Privateroute><Update></Update></Privateroute>,
               loader : ({params})=> fetch(`http://localhost:5000/info/${params.id}`)
+            },
+            {
+              path : '/mostrecent',
+              element : <Mostrecent></Mostrecent>
             },
             {
                 path : '/login',
