@@ -13,7 +13,7 @@ const Navbar = () => {
     <li>     <NavLink
                     to='/'
                     className={({ isActive }) =>
-                      isActive && 'bg-black underline'
+                      isActive && 'text-red-700 underline'
                        
                     }
                   >
@@ -22,7 +22,7 @@ const Navbar = () => {
     <li>     <NavLink
                     to='/addblog'
                     className={({ isActive }) =>
-                      isActive && 'bg-black underline'
+                      isActive && 'text-red-700 underline'
                        
                     }
                   >
@@ -31,7 +31,7 @@ const Navbar = () => {
     <li>     <NavLink
                     to='/allblog'
                     className={({ isActive }) =>
-                      isActive && 'bg-black underline'
+                      isActive && 'text-red-700 underline'
                        
                     }
                   >
@@ -40,7 +40,7 @@ const Navbar = () => {
     <li>     <NavLink
                     to='/featuredblogs'
                     className={({ isActive }) =>
-                      isActive && 'bg-black underline'
+                      isActive && 'text-red-700 underline'
                        
                     }
                   >
@@ -49,7 +49,7 @@ const Navbar = () => {
     <li>     <NavLink
                     to='/wishlist'
                     className={({ isActive }) =>
-                      isActive && 'bg-black underline'
+                      isActive && 'text-red-700 underline'
                        
                     }
                   >
@@ -58,7 +58,7 @@ const Navbar = () => {
     <li>     <NavLink
                     to='/login'
                     className={({ isActive }) =>
-                      isActive && 'bg-black underline'
+                      isActive && 'text-red-700 underline'
                        
                     }
                   >

@@ -1,12 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-
-
-
-
 const Addblog = () => {
-
     const currentdate = new Date();
     const formattedtime = currentdate.toLocaleTimeString()
     // console.log(formattedtime)
