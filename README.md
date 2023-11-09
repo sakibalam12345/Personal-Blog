@@ -1,8 +1,16 @@
-# React + Vite
+# Title
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Think Travel Eat
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- user will have to register to upload blog
+- user can view full photo by clicking on them
+- user can update his own blog details but cant comment on his own blog
+- user can see most recent blogs by clicking on recent blogs
+- user can login with google
+
+
+## 🔗 Live site link
+
+- 
