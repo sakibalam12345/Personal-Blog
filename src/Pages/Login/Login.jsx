@@ -38,6 +38,7 @@ const Login = () => {
       loginwithgoogle()
       .then(res=>{
         console.log(res)
+        navigate('/')
       })
       .catch(error=>{
         console.error(error)

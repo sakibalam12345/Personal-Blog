@@ -13,4 +13,4 @@ Think Travel Eat
 
 ## 🔗 Live site link
 
-- https://blog-website-15a06.web.app
+- https://fluffy-dodol-cdb7f4.netlify.app
